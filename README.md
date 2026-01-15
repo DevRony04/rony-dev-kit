@@ -32,7 +32,7 @@ A collection of essential developer utilities built with modern web technologies
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/yourusername/wisetools.git
+git clone https://github.com/fiston-user/wisetools.git
 cd wisetools
 ```
 
@@ -55,31 +55,6 @@ pnpm dev
 ```bash
 pnpm build
 pnpm start
-```
-
-## Project Structure
-
-```
-src/
-├── app/
-│   ├── tools/
-│   │   ├── jwt/          # JWT encoder/decoder
-│   │   ├── uuid/         # UUID generator
-│   │   ├── base64/       # Base64 encoder/decoder
-│   │   ├── hash/         # Hash generator
-│   │   ├── json/         # JSON formatter
-│   │   ├── password/     # Password generator
-│   │   ├── regex/        # Regex tester
-│   │   └── timestamp/    # Timestamp converter
-│   ├── layout.tsx
-│   └── page.tsx
-├── components/
-│   ├── icons/            # Custom SVG icons
-│   ├── Logo.tsx
-│   ├── Sidebar.tsx
-│   └── ToolIcon.tsx
-└── lib/
-    └── tools.ts          # Tool definitions
 ```
 
 ## Privacy
