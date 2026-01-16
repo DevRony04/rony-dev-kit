@@ -54,4 +54,10 @@ export const tools: Tool[] = [
     description: "Convert between Unix timestamps and dates",
     icon: "timestamp",
   },
+  {
+    name: "JSON Schema Validator",
+    slug: "schema",
+    description: "Validate JSON against a JSON Schema",
+    icon: "schema",
+  },
 ];

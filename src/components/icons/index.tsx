@@ -5,4 +5,5 @@ export { HashIcon } from "./HashIcon";
 export { JSONIcon } from "./JSONIcon";
 export { PasswordIcon } from "./PasswordIcon";
 export { RegexIcon } from "./RegexIcon";
+export { SchemaIcon } from "./SchemaIcon";
 export { TimestampIcon } from "./TimestampIcon";

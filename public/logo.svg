@@ -1,43 +1,49 @@
 <svg viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#6366f1"/>
-      <stop offset="100%" stop-color="#a855f7"/>
+      <stop offset="0%" stop-color="#6366f1" />
+      <stop offset="100%" stop-color="#8b5cf6" />
+    </linearGradient>
+    <linearGradient id="accentGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f8fafc" />
+      <stop offset="100%" stop-color="#e2e8f0" />
     </linearGradient>
   </defs>
-  
-  <!-- Background rounded square -->
-  <rect x="32" y="32" width="448" height="448" rx="88" fill="url(#bgGradient)"/>
-  
-  <!-- Code brackets < > representing developer tools -->
-  <path 
-    d="M160 200L100 256L160 312" 
-    stroke="white" 
-    stroke-width="36" 
-    stroke-linecap="round" 
-    stroke-linejoin="round"
-    fill="none"
+
+  <rect x="32" y="32" width="448" height="448" rx="96" fill="url(#bgGradient)" />
+
+  <rect
+    x="132"
+    y="120"
+    width="248"
+    height="272"
+    rx="40"
+    stroke="url(#accentGradient)"
+    stroke-width="24"
   />
-  <path 
-    d="M352 200L412 256L352 312" 
-    stroke="white" 
-    stroke-width="36" 
-    stroke-linecap="round" 
-    stroke-linejoin="round"
-    fill="none"
-  />
-  
-  <!-- Center slash -->
-  <path 
-    d="M290 160L222 352" 
-    stroke="white" 
-    stroke-width="36" 
+
+  <path
+    d="M196 212L158 256L196 300"
+    stroke="white"
+    stroke-width="28"
     stroke-linecap="round"
-    fill="none"
+    stroke-linejoin="round"
   />
-  
-  <!-- Spark/magic accent -->
-  <circle cx="340" cy="140" r="16" fill="#fbbf24"/>
-  <circle cx="380" cy="170" r="10" fill="#fbbf24" opacity="0.7"/>
-  <circle cx="360" cy="120" r="8" fill="#fbbf24" opacity="0.5"/>
+  <path
+    d="M316 212L354 256L316 300"
+    stroke="white"
+    stroke-width="28"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+  <path
+    d="M284 200L228 312"
+    stroke="white"
+    stroke-width="28"
+    stroke-linecap="round"
+  />
+
+  <circle cx="256" cy="164" r="10" fill="#fbbf24" />
+  <circle cx="296" cy="176" r="7" fill="#fbbf24" opacity="0.7" />
+  <circle cx="220" cy="176" r="7" fill="#fbbf24" opacity="0.7" />
 </svg>
