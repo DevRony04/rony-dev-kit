@@ -1,6 +1,6 @@
-# WiseTools
+# RonyDevKit
 
-A collection of essential developer utilities built with modern web technologies. WiseTools provides a fast, privacy-focused, and offline-capable suite of tools that developers use daily.
+RonyDevKit is a collection of essential developer utilities built with modern web technologies. It provides a fast, privacy-first, and offline-capable suite of tools that developers use in their daily workflows.
 
 ## Features
 
