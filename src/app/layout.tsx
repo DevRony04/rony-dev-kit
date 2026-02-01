@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "WiseTools - Developer Utilities",
+  title: "RonyDevKit - Developer Utilities",
   description: "A collection of useful developer tools",
   icons: {
     icon: "/logo.svg",

@@ -7,7 +7,7 @@ import { tools } from "@/lib/tools";
 import { Logo } from "./Logo";
 import { ToolIcon } from "./ToolIcon";
 
-const THEME_KEY = "wisetools-theme";
+const THEME_KEY = "RonyDevKit-theme";
 
 type Theme = "dark" | "light" | "system";
 
@@ -36,12 +36,29 @@ export function Sidebar() {
   const [isCollapsed, setIsCollapsed] = useState(false);
   const [isMobileOpen, setIsMobileOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  const [theme, setTheme] = useState<Theme>("system");
-  const [resolvedTheme, setResolvedTheme] = useState<ResolvedTheme>("dark");
+  const [theme, setTheme] = useState<Theme>(() => {
+    try {
+      const stored = window.localStorage.getItem(THEME_KEY) as Theme | null;
+      return stored ?? "system";
+    } catch {
+      return "system";
+    }
+  });
+  const [resolvedTheme, setResolvedTheme] = useState<ResolvedTheme>(() => {
+    try {
+      return resolveTheme((window.localStorage.getItem(THEME_KEY) as Theme) ?? "system");
+    } catch {
+      return "dark";
+    }
+  });
 
   useEffect(() => {
-    setIsMobileOpen(false);
-  }, [pathname]);
+    if (isMobileOpen) {
+      const t = setTimeout(() => setIsMobileOpen(false), 0);
+      return () => clearTimeout(t);
+    }
+    return;
+  }, [pathname, isMobileOpen]);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -57,12 +74,7 @@ export function Sidebar() {
   }, []);
 
   useEffect(() => {
-    const storedTheme = window.localStorage.getItem(THEME_KEY) as Theme | null;
-    const initialTheme = storedTheme ?? "system";
-    const resolved = resolveTheme(initialTheme);
-    setTheme(initialTheme);
-    setResolvedTheme(resolved);
-    document.documentElement.dataset.theme = resolved;
+    document.documentElement.dataset.theme = resolvedTheme;
 
     const media = window.matchMedia("(prefers-color-scheme: light)");
     const handleChange = () => {
@@ -81,7 +93,7 @@ export function Sidebar() {
     return () => {
       media.removeEventListener("change", handleChange);
     };
-  }, [theme]);
+  }, [theme, resolvedTheme]);
 
   const sidebarClasses = [
     "bg-card border-r border-card-border p-4 flex flex-col transition-all duration-300",
@@ -156,7 +168,7 @@ export function Sidebar() {
               }`}
             />
             <div className={isCollapsed ? "md:hidden" : "block"}>
-              <h1 className="text-xl font-bold">WiseTools</h1>
+              <h1 className="text-xl font-bold">RonyDevKit</h1>
               <p className="text-xs text-muted">Developer Utilities</p>
             </div>
           </Link>

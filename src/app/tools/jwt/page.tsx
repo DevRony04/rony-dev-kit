@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import * as jose from "jose";
 import { JWTIcon } from "@/components/icons";
 
@@ -48,8 +48,17 @@ export default function JWTTools() {
 function GenerateJWT() {
   const [secret, setSecret] = useState("");
   const [payload, setPayload] = useState(
-    JSON.stringify({ sub: "1234567890", name: "John Doe", iat: Math.floor(Date.now() / 1000) }, null, 2)
+    JSON.stringify({ sub: "1234567890", name: "John Doe", iat: 0 }, null, 2)
   );
+
+  useEffect(() => {
+    const t = setTimeout(() => {
+      setPayload(
+        JSON.stringify({ sub: "1234567890", name: "John Doe", iat: Math.floor(Date.now() / 1000) }, null, 2)
+      );
+    }, 0);
+    return () => clearTimeout(t);
+  }, []);
   const [algorithm, setAlgorithm] = useState("HS256");
   const [expiresIn, setExpiresIn] = useState("1h");
   const [token, setToken] = useState("");

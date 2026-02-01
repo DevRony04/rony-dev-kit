@@ -6,14 +6,18 @@ import { TimestampIcon } from "@/components/icons";
 export default function TimestampConverter() {
   const [timestamp, setTimestamp] = useState("");
   const [dateString, setDateString] = useState("");
-  const [currentTime, setCurrentTime] = useState(Date.now());
+  const [currentTime, setCurrentTime] = useState<number>(0);
   const [timezone, setTimezone] = useState("local");
 
   useEffect(() => {
+    const t = setTimeout(() => setCurrentTime(Date.now()), 0);
     const interval = setInterval(() => {
       setCurrentTime(Date.now());
     }, 1000);
-    return () => clearInterval(interval);
+    return () => {
+      clearTimeout(t);
+      clearInterval(interval);
+    };
   }, []);
 
   const timestampToDate = (ts: string) => {

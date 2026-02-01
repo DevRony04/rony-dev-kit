@@ -27,7 +27,7 @@ export default function Home() {
             <Logo className="w-14 h-14" />
             <div>
               <p className="text-sm uppercase tracking-[0.25em] text-muted">
-                WiseTools
+                RonyDevKit
               </p>
               <h1 className="text-4xl md:text-5xl font-bold leading-tight">
                 Powerful developer utilities.

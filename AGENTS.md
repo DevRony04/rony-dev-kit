@@ -1,7 +1,7 @@
 # AGENTS
 
 ## Project overview
-- Repo: WiseTools, Next.js App Router + TypeScript.
+- Repo: RonyDevKit, Next.js App Router + TypeScript.
 - UI uses Tailwind CSS utility classes.
 - Path alias `@/*` maps to `src/*`.
 - Node.js 18.17+ and pnpm recommended.
