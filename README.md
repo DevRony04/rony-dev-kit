@@ -2,7 +2,7 @@
 
 RonyDevKit is a collection of essential developer utilities built with modern web technologies. It provides a fast, privacy-first, and offline-capable suite of tools that developers use in their daily workflows.
 
-## Features
+## ✨ Features
 
 - **JWT Tools** - Generate, decode, and verify JSON Web Tokens with support for HS256, HS384, and HS512 algorithms
 - **UUID Generator** - Generate UUIDs with options for uppercase, lowercase, and no-dash formats
@@ -13,14 +13,14 @@ RonyDevKit is a collection of essential developer utilities built with modern we
 - **Regex Tester** - Test regular expressions with live matching, highlighting, and common pattern presets
 - **Timestamp Converter** - Convert between Unix timestamps and human-readable dates with timezone support
 
-## Tech Stack
+## 🧑‍💻 Tech Stack
 
 - [Next.js 15](https://nextjs.org/) - React framework with App Router
 - [TypeScript](https://www.typescriptlang.org/) - Type-safe JavaScript
 - [Tailwind CSS](https://tailwindcss.com/) - Utility-first CSS framework
 - [jose](https://github.com/panva/jose) - JavaScript Object Signing and Encryption
 
-## Getting Started
+## 🚀 Getting Started
 
 ### Prerequisites
 
@@ -50,18 +50,18 @@ pnpm dev
 
 4. Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-### Build for Production
+### 🏗️ Build for Production
 
 ```bash
 pnpm build
 pnpm start
 ```
 
-## Privacy
+## 🔒 Privacy
 
 All tools run entirely in your browser. No data is sent to any server. Your inputs never leave your device.
 
-## Contributing
+## 🤝 Contributing
 
 Contributions are welcome. Please follow these steps:
 
@@ -79,11 +79,11 @@ Contributions are welcome. Please follow these steps:
 4. Export the icon from `src/components/icons/index.tsx`
 5. Register the icon in `src/components/ToolIcon.tsx`
 
-## License
+## 📄 License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
-## Acknowledgments
+## 🙌 Acknowledgments
 
 - Built with [Next.js](https://nextjs.org/)
 - Icons designed as custom SVG components
