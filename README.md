@@ -32,8 +32,8 @@ RonyDevKit is a collection of essential developer utilities built with modern we
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/fiston-user/wisetools.git
-cd wisetools
+git clone https://github.com/DevRony04/rony-dev-kit.git
+cd rony-dev-kit
 ```
 
 2. Install dependencies:
